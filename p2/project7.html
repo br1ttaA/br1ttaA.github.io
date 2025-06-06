@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 7: Data Exploration</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background: #eef1f5; color: #333; }
+    header { background: #34495e; color: white; padding: 40px 20px; text-align: center; }
+    header h1 { margin: 0; font-size: 2.5em; }
+    main { max-width: 900px; margin: 30px auto; padding: 20px; background: white; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); }
+    h2, h3 { color: #2c3e50; margin-top: 30px; }
+    pre { background-color: #f4f4f4; padding: 10px; border-left: 4px solid #ccc; overflow-x: auto; }
+    code { font-family: Consolas, monospace; }
+    footer { text-align: center; padding: 20px; font-size: 0.9em; color: #666; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Project 7: Data Exploration & Visualization</h1>
+    <p>Exploring Real-World Data Using Python</p>
+  </header>
+  <main>
+    <section>
+      <h2>Overview</h2>
+      <p>This project applied data exploration and visualization techniques to a real-world dataset of interest. Building upon prior labs, such as the Titanic dataset exploration, this project emphasized the power of visual storytelling in data science using <code>pandas</code> and <code>matplotlib</code>.</p>
+    </section>
+
+    <section>
+      <h2>Tools and Libraries</h2>
+      <ul>
+        <li>Python</li>
+        <li>Pandas</li>
+        <li>Matplotlib</li>
+        <li>Google Colab</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Step 1: Load and Inspect Dataset</h2>
+      <p>Using pandas to load the dataset and preview the structure:</p>
+      <pre><code>import pandas as pd
+
+df = pd.read_csv("data.csv")
+df.head()</code></pre>
+    </section>
+
+    <section>
+      <h2>Step 2: Data Cleaning</h2>
+      <p>Check for missing values and clean the data accordingly:</p>
+      <pre><code>df.isnull().sum()
+df.dropna(inplace=True)</code></pre>
+    </section>
+
+    <section>
+      <h2>Step 3: Analyze the Data</h2>
+      <p>Use summary statistics and value counts to understand patterns:</p>
+      <pre><code>df.describe()
+df['column_name'].value_counts()</code></pre>
+    </section>
+
+    <section>
+      <h2>Step 4: Create Visualizations</h2>
+      <p>Histogram for age distribution:</p>
+      <pre><code>import matplotlib.pyplot as plt
+
+plt.hist(df['Age'])
+plt.title("Age Distribution")
+plt.xlabel("Age")
+plt.ylabel("Frequency")
+plt.show()</code></pre>
+
+      <p>Bar chart for categorical analysis:</p>
+      <pre><code>df['Gender'].value_counts().plot(kind='bar')
+plt.title("Gender Breakdown")
+plt.show()</code></pre>
+    </section>
+
+    <section>
+      <h2>Conclusions</h2>
+      <p>This project deepened my understanding of working with real data and taught me how to clean, analyze, and communicate insights using Python. It also reinforced the importance of clear, accurate visualizations in telling a data story.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Britta Anderson. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Exploration & Visualization Project</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background: #f4f6f8; color: #333; }
+    header { background: #2c3e50; color: white; padding: 40px 20px; text-align: center; }
+    header h1 { margin: 0; font-size: 2.5em; }
+    main { max-width: 900px; margin: 30px auto; padding: 0 20px; background: white; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); padding: 30px; }
+    h2, h3 { color: #2c3e50; margin-top: 30px; }
+    pre { background-color: #f4f4f4; padding: 10px; border-left: 4px solid #ccc; overflow-x: auto; }
+    code { font-family: Consolas, monospace; }
+    footer { text-align: center; padding: 20px; font-size: 0.9em; color: #666; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Data Exploration & Visualization</h1>
+    <p>By Britta Anderson</p>
+  </header>
+  <main>
+    <section>
+      <h2>Project Overview</h2>
+      <p>This project focused on exploring and visualizing a real-world dataset using Python. Inspired by a lab on the Titanic dataset, I selected a new dataset of interest, performed exploratory data analysis (EDA), and created visualizations to uncover insights.</p>
+    </section>
+
+    <section>
+      <h2>Technologies Used</h2>
+      <ul>
+        <li>Python</li>
+        <li>Pandas</li>
+        <li>Matplotlib</li>
+        <li>Google Colab</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>1. Dataset Loading and Inspection</h2>
+      <p>The dataset was loaded using pandas and the initial structure was inspected with <code>head()</code>:</p>
+      <pre><code>import pandas as pd
+
+df = pd.read_csv("data.csv")
+df.head()</code></pre>
+    </section>
+
+    <section>
+      <h2>2. Data Cleaning</h2>
+      <p>Missing values were identified and cleaned to ensure accurate analysis:</p>
+      <pre><code>df.isnull().sum()
+df.dropna(inplace=True)</code></pre>
+    </section>
+
+    <section>
+      <h2>3. Exploratory Data Analysis</h2>
+      <p>Basic statistics and distributions were explored:</p>
+      <pre><code>df.describe()
+df["Category"].value_counts()</code></pre>
+    </section>
+
+    <section>
+      <h2>4. Data Visualizations</h2>
+      <p>Histograms and bar charts were created using Matplotlib:</p>
+      <pre><code>import matplotlib.pyplot as plt
+
+plt.hist(df['Age'])
+plt.title("Age Distribution")
+plt.xlabel("Age")
+plt.ylabel("Frequency")
+plt.show()</code></pre>
+
+      <pre><code>df['Gender'].value_counts().plot(kind='bar')
+plt.title("Gender Breakdown")
+plt.show()</code></pre>
+    </section>
+
+    <section>
+      <h2>5. Conclusions</h2>
+      <p>This project improved my data analysis skills, deepened my understanding of pandas and matplotlib, and showed how data can be used to support meaningful insights. I learned how to ask the right questions, clean messy data, and create visual narratives from datasets.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Britta Anderson. All rights reserved.</p>
+  </footer>
+</body>
+</html>
